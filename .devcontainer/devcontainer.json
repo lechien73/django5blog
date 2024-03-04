@@ -6,8 +6,17 @@
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
-		"ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/devcontainers-contrib/features/heroku-cli:1": {}
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"version": "16",
+			"nvmVersion": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/heroku-cli:1": {
+			"version": "latest"
+		},
+		"ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {
+			"version": "13"
+		}
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
