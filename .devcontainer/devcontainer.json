@@ -18,6 +18,9 @@
 			"version": "13"
 		}
 	},
+	"portsAttributes": {
+		"5432": {"label": "PostgreSQL port", "onAutoForward": "silent"}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
