@@ -11,14 +11,16 @@ services:
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
+    network_mode: service:db
 
-  psql:
-    image: postgres:11.9
+  db:
+    image: postgres:latest
+    restart: unless-stopped
     environment:
       - POSTGRES_DB=mydb
       - POSTGRES_USER=codeany
       - POSTGRES_PASSWORD=pass1234
-    network_mode: host
+    
 
     volumes:
       - postgres-data:/var/lib/postgresql/data
